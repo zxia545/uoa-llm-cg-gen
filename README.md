@@ -16,10 +16,21 @@ In this demo, the GPT-4o model is used to generate executable Python code based 
 ## Requirements
 
 - Python 3.x
-- Conda environment (`lm-eval`) with the following packages:
+- A Conda environment (`lm-eval`) with the following dependencies:
   - `numpy`
   - `plotly`
+  - `openai`
 - GPT-4o model access through OpenAI API
+
+Alternatively, the required dependencies can be installed using the provided `requirements.txt`:
+
+### Using `requirements.txt`
+
+1. Install the dependencies by running:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Setup Instructions
 
@@ -32,15 +43,20 @@ In this demo, the GPT-4o model is used to generate executable Python code based 
 2. Set up the Conda environment:
 
    ```bash
-   conda create -n lm-eval python=3.8 numpy plotly
+   conda create -n lm-eval python=3.10
    conda activate lm-eval
    ```
-3. Add your OpenAI API key to your environment:
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Add your OpenAI API key to your environment:
 
    ```bash
    export OPENAI_API_KEY="your_openai_api_key"
    ```
-4. Run the demo:
+5. Run the demo:
 
    ```bash
    python demo.py

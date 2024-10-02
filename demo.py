@@ -1,8 +1,6 @@
 import time
 import os
-import requests
 import re
-import tempfile
 import subprocess
 from typing import Optional
 
@@ -80,9 +78,6 @@ def process_question(question):
         return
     
     
-    
-    # make temp folder for testing
-    # temp_folder = tempfile.mkdtemp()
     temp_folder = "./temp"
     
     test_path = os.path.join(temp_folder, "test.py")
@@ -111,8 +106,6 @@ def process_question(question):
     except Exception as e:
         print(f'Exception for question {question} {str(e)}')
 
-    # finally:
-    #     os.system(f"rm -rf {temp_folder}")  # Clean up the temp folder
 
 
 if __name__ == "__main__":
